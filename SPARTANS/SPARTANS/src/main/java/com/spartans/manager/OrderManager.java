@@ -1,10 +1,12 @@
 package com.spartans.manager;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.spartans.dto.Location;
 import com.spartans.dto.OfficialInfo;
 import com.spartans.dto.Order;
 import java.util.List;
+import java.util.Map;
 
 public class OrderManager {
 
@@ -25,6 +27,18 @@ public class OrderManager {
         return DBManager.getDB().getAll("Order");
     }
 
+    public boolean updateOrder(String Id, Map inputMap) throws Exception {
+        if (Id == null || inputMap == null) {
+            return false;
+        }
+        String json = DBManager.getDB().getByKey("Order", Id);
+        List<Map> olderMap = new Gson().fromJson(json, new TypeToken<List<Map>>() {
+        }.getType());
+        Map existingMap = olderMap.get(0);
+        existingMap.putAll(inputMap);
+        return DBManager.getDB().modify("Order", new Gson().toJson(existingMap), Id);
+    }
+
     public static void main(String arg[]) throws Exception {
         Order or = new Order();
         Location locationFrom = new Location();
@@ -34,14 +48,12 @@ public class OrderManager {
         locationTo.setLatitude("15.8872° N");
         locationTo.setLongitude("75.7047° E");
 
-        
-     OfficialInfo merchantInfo=new OfficialInfo();
-     merchantInfo.setAddress("Bangalore Electronic city");
-     merchantInfo.setCity("Bangalore");
-     merchantInfo.setName("Ammi Biryani");
-     merchantInfo.setVarified(true);
-     
-     
+        OfficialInfo merchantInfo = new OfficialInfo();
+        merchantInfo.setAddress("Bangalore Electronic city");
+        merchantInfo.setCity("Bangalore");
+        merchantInfo.setName("Ammi Biryani");
+        merchantInfo.setVarified(true);
+
         or.setLocationFrom(locationFrom);
         or.setLocationTo(locationTo);
         or.setMerchantInfo(merchantInfo);

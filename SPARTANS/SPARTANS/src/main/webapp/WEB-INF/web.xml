@@ -12,6 +12,14 @@
         <servlet-name>CreateDelivaryPerson</servlet-name>
         <servlet-class>com.spartans.services.CreateDelivaryPerson</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UpdateDelivaryPerson</servlet-name>
+        <servlet-class>com.spartans.services.UpdateDelivaryPerson</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateOrder</servlet-name>
+        <servlet-class>com.spartans.services.UpdateOrder</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CreateOrder</servlet-name>
         <url-pattern>/CreateOrder</url-pattern>
@@ -23,6 +31,14 @@
     <servlet-mapping>
         <servlet-name>CreateDelivaryPerson</servlet-name>
         <url-pattern>/CreateDelivaryPerson</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateDelivaryPerson</servlet-name>
+        <url-pattern>/UpdateDelivaryPerson</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateOrder</servlet-name>
+        <url-pattern>/UpdateOrder</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
