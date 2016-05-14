@@ -8,6 +8,10 @@
         <servlet-name>GetOrderLocationBased</servlet-name>
         <servlet-class>com.spartans.services.GetOrderLocationBased</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CreateDelivaryPerson</servlet-name>
+        <servlet-class>com.spartans.services.CreateDelivaryPerson</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CreateOrder</servlet-name>
         <url-pattern>/CreateOrder</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>GetOrderLocationBased</servlet-name>
         <url-pattern>/GetOrderLocationBased</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateDelivaryPerson</servlet-name>
+        <url-pattern>/CreateDelivaryPerson</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
