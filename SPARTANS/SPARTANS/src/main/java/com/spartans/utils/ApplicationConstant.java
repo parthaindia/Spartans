@@ -37,9 +37,9 @@ public interface ApplicationConstant {
     public static final String HTTP_STATUS_EXCEPTION = "500";
     public static final String HTTP_USER_EXIST = "409";
 
-    public static final String DBSCHEMA = "masx";
+    public static final String DBSCHEMA = "sparta";
     public static final String DBPORT = "27017";
-    public static final String DBURL = "192.168.2.50";
+    public static final String DBURL = "localhost";
     public static String GOOGLE_KEY = "";
     public static String REGISTRATION_TABLE = "user";
     public static final String INSTALLATION_TABLE = "installation";
