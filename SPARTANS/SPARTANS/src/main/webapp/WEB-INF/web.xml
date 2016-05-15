@@ -20,6 +20,22 @@
         <servlet-name>UpdateOrder</servlet-name>
         <servlet-class>com.spartans.services.UpdateOrder</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GetOrderIdBased</servlet-name>
+        <servlet-class>com.spartans.services.GetOrderIdBased</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetAllDelivaryPerson</servlet-name>
+        <servlet-class>com.spartans.services.GetAllDelivaryPerson</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetDelivaryPersonIdBased</servlet-name>
+        <servlet-class>com.spartans.services.GetDelivaryPersonIdBased</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AcceptTOrder</servlet-name>
+        <servlet-class>com.spartans.services.AcceptTOrder</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CreateOrder</servlet-name>
         <url-pattern>/CreateOrder</url-pattern>
@@ -39,6 +55,22 @@
     <servlet-mapping>
         <servlet-name>UpdateOrder</servlet-name>
         <url-pattern>/UpdateOrder</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetOrderIdBased</servlet-name>
+        <url-pattern>/GetOrderIdBased</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetAllDelivaryPerson</servlet-name>
+        <url-pattern>/GetAllDelivaryPerson</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetDelivaryPersonIdBased</servlet-name>
+        <url-pattern>/GetDelivaryPersonIdBased</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AcceptTOrder</servlet-name>
+        <url-pattern>/AcceptTOrder</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

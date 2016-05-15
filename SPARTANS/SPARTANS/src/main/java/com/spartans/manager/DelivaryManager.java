@@ -27,7 +27,15 @@ public class DelivaryManager {
         existingMap.putAll(inputMap);
         return DBManager.getDB().modify("deliverperson", new Gson().toJson(existingMap), Id);
     }
-    
-    
 
+    public String getAllDelivaryPerson() throws Exception {
+        return DBManager.getDB().getAll("deliverperson");
+    }
+
+    public String getDelivaryPersonIdBased(String Id) throws Exception {
+        if (Id == null) {
+            return "no data received";
+        }
+        return DBManager.getDB().getByKey("deliverperson", Id);
+    }
 }
